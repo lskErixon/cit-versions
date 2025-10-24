@@ -16,7 +16,7 @@ if (!class_exists('MongoDB\\Driver\\Manager')) {
 $mongoUri   = 'mongodb://localhost:27017';
 $dbName     = 'simple_blog';
 $collName   = 'posts';
-$fullNS     = $dbName . '.' . $collName';
+$fullNS     = $dbName . '.' . $collName;
 $limit      = 50; // show latest 50
 
 $manager = new MongoDB\Driver\Manager($mongoUri);
