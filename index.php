@@ -13,10 +13,11 @@ if (!class_exists('MongoDB\\Driver\\Manager')) {
 }
 
 // --- Config ---
-$mongoUri   = 'mongodb://localhost:27017';
+// --- Config ---
+$mongoUri   = 'mongodb://bloguser:superStrongPassword!@localhost:27017/simple_blog?authSource=simple_blog';
 $dbName     = 'simple_blog';
 $collName   = 'posts';
-$fullNS     = $dbName . '.' . $collName;
+$fullNS     = $dbName . '.' . $collName; // <-- removed stray quote!
 $limit      = 50; // show latest 50
 
 $manager = new MongoDB\Driver\Manager($mongoUri);
